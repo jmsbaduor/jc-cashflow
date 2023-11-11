@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Athlete's Cash Flow Calculator</title>
+    <!-- Include jQuery and any additional CSS or JS files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="cashFlowCalculator">
+        <!-- Income, Expenses, Savings Goals, and Investment Recommendations Sections -->
+        <section id="incomeSection">
+            <h2>Income</h2>
+            <ul id="incomesList"></ul>
+            <button id="addIncome">Add Income</button>
+            <p>Total Income: €<span id="totalIncome">0</span></p>
+        </section>
+
+        <section id="expensesSection">
+            <h2>Expenses</h2>
+            <ul id="expensesList"></ul>
+            <button id="addExpense">Add Expense</button>
+            <p>Total Expenses: €<span id="totalExpenses">0</span></p>
+        </section>
+
+        <section id="savingsGoalsSection">
+            <h2>Savings Goals</h2>
+            <ul id="savingsList"></ul>
+            <button id="addSaving">Add Savings Goal</button>
+            <p>Total Savings Goal: €<span id="totalSavings">0</span></p>
+        </section>
+
+        <section id="investableAmountSection">
+            <h2>Amount You Can Invest</h2>
+            <p>Investable Amount: €<span id="investableAmount">0</span></p>
+        </section>
+
+        <section id="investmentRecommendationsSection">
+            <h2>Investment Recommendations</h2>
+            <ul id="investmentsList"></ul>
+            <button id="addInvestment">Add Investment Type</button>
+            <p>Total Yearly Investment: €<span id="totalYearlyInvestment">0</span></p>
+
+        </section>
+
+        <!-- Modal for Add/Edit -->
+        <div id="formModal" style="display: none;">
+            <input type="text" id="formTitle" placeholder="Title">
+            <input type="number" id="formAmount" placeholder="Amount">
+            <!-- Include field for percentage if it's an investment -->
+            <input type="number" id="formPercentage" placeholder="Percentage" style="display: none;">
+            <button id="saveForm">Save</button>
+            <button id="cancelForm">Cancel</button>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="app.js"></script>
+</body>
+</html>

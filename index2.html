@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete's Cash Flow Calculator</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include other necessary files -->
+
+    <style>
+        /* Additional styles can be added here */
+        /* Customize modal styles if needed */
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6 text-center">Athlete's Cash Flow Calculator</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <!-- Income Section -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Income</h2>
+                <ul id="incomesList" class="mb-4"></ul>
+                <button id="addIncome" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Income</button>
+                <p class="mt-4">Total Income: €<span id="totalIncome">0</span></p>
+            </div>
+
+            <!-- Expenses Section -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Expenses</h2>
+                <ul id="expensesList" class="mb-4"></ul>
+                <button id="addExpense" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Expense</button>
+                <p class="mt-4">Total Expenses: €<span id="totalExpenses">0</span></p>
+            </div>
+
+            <!-- Savings Goals Section -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Savings Goals</h2>
+                <ul id="savingsList" class="mb-4"></ul>
+                <button id="addSaving" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Saving</button>
+                <p class="mt-4">Total Savings Goals: €<span id="totalSavings">0</span></p>
+            </div>
+
+            <!-- Amount you can invest Section -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Amount you can invest</h2>
+                <p class="mt-4">Investable Amount: €<span id="investableAmount">0</span></p>
+                <ul id="investmentList" class="mb-4"></ul>
+                <button id="addInvestments" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Investment</button>
+                <p class="mt-4">Total Yearly Investment: €<span id="totalYearlyInvestment">0</span></p>
+            </div>
+        </div>
+
+        <!-- Modal for Add/Edit -->
+        <div id="formModal" class="hidden">
+            <!-- Modal Content -->
+            <div class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white p-8 rounded shadow-lg">
+                    <h2 class="text-2xl font-semibold mb-4" id="formTitleLabel"></h2>
+                    <form id="itemForm">
+                        <div class="mb-4">
+                            <label for="formTitle">Title:</label>
+                            <input type="text" id="formTitle" class="border rounded px-2 py-1 w-full">
+                        </div>
+                        <div class="mb-4" id="formAmountWrapper">
+                            <label for="formAmount">Amount (€):</label>
+                            <input type="number" id="formAmount" class="border rounded px-2 py-1 w-full">
+                        </div>
+                        <div class="mb-4" id="formPercentageWrapper">
+                            <label for="formPercentage">Percentage:</label>
+                            <input type="number" id="formPercentage" class="border rounded px-2 py-1 w-full">
+                        </div>
+                        <button type="button" id="saveForm" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save</button>
+                        <button type="button" id="cancelForm" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
